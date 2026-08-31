@@ -23,4 +23,5 @@ response.json
 
 # Environment and secrets
 .env
-.env.*
+.env.*terraform/terraform.tfvars
+terraform/terraform.tfvars

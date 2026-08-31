@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-west-2"
+  region = var.aws_region
 }
 resource "aws_s3_bucket" "notification_platform" {
   bucket_prefix = "notification-platform-"
@@ -88,7 +88,7 @@ resource "aws_lambda_function" "notification_platform" {
   role = aws_iam_role.lambda_role.arn
   environment {
     variables = {
-      SENDER_EMAIL      = "musej1998@outlook.com"
+      SENDER_EMAIL      = var.sender_email
       API_KEY_PARAMETER = "/serverless-notification/API_KEY"
     }
   }

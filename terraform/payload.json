@@ -1,3 +1,0 @@
-{
-  "body": "{\"recipient\":\"test@example.com\",\"subject\":\"AWS Lambda Test\",\"message\":\"This notification was processed by AWS Lambda!\"}"
-}
